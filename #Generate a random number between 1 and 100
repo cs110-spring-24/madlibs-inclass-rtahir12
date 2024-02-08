@@ -1,0 +1,23 @@
+#Generate a random number between 1 and 100
+num = random.randint(1, 100)
+
+# Initialize a variable to keep track of the guess count
+guess_count = 0
+
+# Start the guessing loop
+while True:
+    # Increase the guess count
+    guess_count += 1
+    
+    # Prompt the user for their guess
+    user_input = input("Enter your guess: ")
+    user_guess = int(user_input)  # Convert the input to an integer
+
+    # Check the user's guess against the generated number
+    if user_guess > num:
+        print("Too high!")
+    elif user_guess < num:
+        print("Too low!")
+    else:
+        print(f"You got it! It took you {guess_count} guesses.")
+
